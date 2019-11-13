@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package restaurante;
+import Oyentes.*;
 import views.*;
 /**
  *
@@ -16,8 +17,9 @@ public class Restaurante {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        GUI_InicioSesion iniciosesion = new GUI_InicioSesion();
-        iniciosesion.setVisible(true);
+        o_Menu oyenteMenu = new o_Menu();
+        GUI_Menu menu = new GUI_Menu(oyenteMenu);
+        menu.setVisible(true);
         System.out.println("hola");
     }
     

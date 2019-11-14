@@ -6,15 +6,47 @@
 package Oyentes;
 
 import java.awt.event.ActionEvent;
+import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
 
 /**
  *
  * @author gerusagames
  */
 public class o_Menu  extends OyenteSuper{
+    //VARIABLES LOCALES
+    int selectedIndex = 0;
     
+    //AL DAR CLICK A BOTON
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("click Menu");
+        JButton btn = (JButton)e.getSource();
+        String str = btn.getText();
+        
+        if(null != str)switch (str) {
+            case "Añadir":
+                print("añadir presionado");
+                
+                break;
+            case "Eliminar":
+                print("Eliminar presionado");
+
+                break;
+            case "Descripción":
+                print("Descripción presionado");
+
+                break;
+            default:
+                break;
+        }
+    }
+    //AL SELECCIONAR ITEMS EN LA LISTA
+    @Override
+    public void valueChanged(ListSelectionEvent e) {
+        if(!e.getValueIsAdjusting()){
+            //IMPLEMENTAR
+             
+           
+        }
     }
 }

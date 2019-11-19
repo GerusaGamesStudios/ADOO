@@ -21,6 +21,10 @@ public class GUI_Menu extends javax.swing.JFrame {
         initComponents();
         o.registrarTodosLosBotonesDelFrame(this);
         o.registrarJList(jList1);
+        DefaultListModel<String> model = new DefaultListModel<>();
+        model.addElement("Hola");
+        model.addElement("miau");
+        jList1.setModel(model);
     }
 
     /**

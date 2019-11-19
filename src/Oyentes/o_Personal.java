@@ -7,12 +7,15 @@ package Oyentes;
 
 import java.awt.event.ActionEvent;
 import javax.swing.JButton;
+import javax.swing.JList;
+import javax.swing.event.ListSelectionEvent;
 import views.*;
 /**
  *
  * @author gerusagames
  */
 public class o_Personal extends OyenteSuper{
+    int selectedIndex = 0;
      //AL DAR CLICK A BOTON
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -34,6 +37,18 @@ public class o_Personal extends OyenteSuper{
                 break;
             default:
                 break;
+        }
+    }
+    
+        //AL SELECCIONAR ITEMS EN LA LISTA
+    @Override
+    public void valueChanged(ListSelectionEvent e) {
+        if(!e.getValueIsAdjusting()){
+            //IMPLEMENTAR
+             JList list = (JList) e.getSource();
+             selectedIndex = list.getSelectedIndex();
+             print(selectedIndex);
+           
         }
     }
 }

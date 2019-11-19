@@ -17,6 +17,7 @@ public class GUI_VisualizarPersonal extends javax.swing.JFrame {
     public GUI_VisualizarPersonal(OyenteSuper o) {
         initComponents();
         o.registrarTodosLosBotonesDelFrame(this);
+        o.registrarJList(jList1);
     }
 
     /**

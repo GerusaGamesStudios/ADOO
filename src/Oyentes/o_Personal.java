@@ -35,6 +35,16 @@ public class o_Personal extends OyenteSuper{
             case "Eliminar":
                 print("Eliminar");
                 break;
+                
+            case "Ver Personal":
+                print("ver Personal");
+                break;
+            case "Modificar Personal":
+                print("personal");
+                break;
+            case "Eliminar Personal":
+                print("EliminarPersnoal");
+                break;
             default:
                 break;
         }

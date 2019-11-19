@@ -36,6 +36,10 @@ public class o_Menu  extends OyenteSuper{
                 print("Descripción presionado");
 
                 break;
+            case "Ordenar Pedido":
+                print("Ordenar Pedido Presionado");
+                
+                break;
             default:
                 break;
         }
@@ -45,7 +49,9 @@ public class o_Menu  extends OyenteSuper{
     public void valueChanged(ListSelectionEvent e) {
         if(!e.getValueIsAdjusting()){
             //IMPLEMENTAR
-             
+             JList list = (JList) e.getSource();
+             selectedIndex = list.getSelectedIndex();
+             print(selectedIndex);
            
         }
     }

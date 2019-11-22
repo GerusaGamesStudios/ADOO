@@ -8,7 +8,6 @@ package Oyentes;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import javax.swing.*;
 import javax.swing.event.*;
 
@@ -71,6 +70,14 @@ public class OyenteSuper implements ActionListener,ListSelectionListener{
             }
         }
     }
+    public void registrarTodosLosBotonesDelPaner(JPanel p){
+        Component[] components = p.getComponents();
+        for (Component component : components) {
+            if (component instanceof JButton) {
+                this.registrarBotonNuevo((JButton) component);
+            }
+        }
+    }
     public void registrarJList(JList j){
         j.addListSelectionListener(this);
     }
@@ -82,6 +89,18 @@ public class OyenteSuper implements ActionListener,ListSelectionListener{
                 System.out.println("Jlist registrado");
             }
         }
+    }
+    
+    public ArrayList<String> obtenerTodosLosTextosdeJpanel (JPanel j){
+        ArrayList<String> strings = new ArrayList<>();
+        Component[] components = j.getComponents();
+        for (Component component : components) {
+            if (component instanceof JTextField) {
+                String str = ((JTextField) component).getText();
+                strings.add(str);
+            }
+        }
+        return strings;
     }
     
 }

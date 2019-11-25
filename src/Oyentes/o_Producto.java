@@ -9,6 +9,6 @@ package Oyentes;
  *
  * @author gerusagames
  */
-public class o_Producto {
+public class o_Producto{
     
 }
